@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Версия модели проекта Maven -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Уникальные идентификаторы проекта -->
+    <groupId>org.edu</groupId>          <!-- Идентификатор организации или пакета -->
+    <artifactId>lab2</artifactId>       <!-- Имя создаваемого артефакта -->
+    <version>1.0-SNAPSHOT</version>     <!-- Версия проекта -->
+    <packaging>war</packaging>          <!-- Тип создаваемого пакета (веб-приложение) -->
+
+    <!-- Свойства проекта -->
+    <properties>
+        <maven.compiler.source>21</maven.compiler.source>         <!-- Версия языка Java -->
+        <maven.compiler.target>21</maven.compiler.target>         <!-- Совместимость байткода -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- Кодировка -->
+    </properties>
+
+    <build>
+        <!-- Имя итогового war-файла -->
+        <finalName>lab2</finalName>
+        <plugins>
+            <!-- Плагин для сборки веб-приложения (WAR) -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>3.3.2</version>
+                <!-- Конфигурация плагина -->
+                <configuration>
+                    <!-- Не выдавать ошибку, если отсутствует web.xml -->
+                    <failOnMissingWebXml>false</failOnMissingWebXml>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
